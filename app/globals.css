@@ -1,26 +1,18 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #09090b;
+  color: #f4f4f5;
+  background-image: radial-gradient(circle at top right, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Tailwind v4 规定：自定义类名必须使用 @utility 包裹，才能正常使用 @apply */
+@utility glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_30px_rgba(6,182,212,0.1)];
+}
+
+@utility glass-badge {
+  @apply px-4 py-1.5 bg-white/10 text-zinc-300 text-sm rounded-full border border-white/5 transition-colors hover:bg-white/20 hover:text-white cursor-default;
 }
