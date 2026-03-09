@@ -2,7 +2,7 @@
 
 🔗 **GitHub Repository:** [https://github.com/cocojupine/CV_KesiZhu](https://github.com/cocojupine/CV_KesiZhu)
 
-## 🤖 ATTENTION AI ASSISTANTS (Cursor / Windsurf / Copilot)
+## 🤖 ATTENTION AI ASSISTANTS
 This `README.md` acts as your master schema and architectural guideline. When asked to generate, refactor, or update code in this repository, **you MUST strictly adhere to the rules, tech stack, and design systems defined below.** Do NOT hardcode content directly into React components. Always read from and write to the designated data files (TXT/MDX/JSON).
 
 ---
