@@ -3,10 +3,10 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Smartphone,
   Mail,
-  Github,
   Linkedin,
   Cpu,
   Layers,
@@ -39,10 +39,10 @@ const content = {
       subRole: "INNOVATION & COMMERCIALIZATION",
       status: "SYSTEM ONLINE",
       version: "KESI_OS_v2.5",
-      location: "ZHEJIANG UNIV. M.Des",
+      location: "ZHEJIANG UNIV. M.Des (2027)",
       currentRoleLabel: "CURRENT ROLE",
       intro: [
-        "M.Des at Zhejiang University (2027). Co-Founder of 2 AI Startups. Previously PM at iFLYTEK & Hello Inc. 3 EI/IEEE Papers. 20+ Awards.",
+        "Co-Founder of 2 AI Startups. Previously PM at iFLYTEK & Hello Inc. 3 EI/IEEE Papers. 20+ Awards.",
       ],
       tags: ["AIGC", "AI ENGINEERING", "DATA EVALUATION", "START-UP"],
     },
@@ -156,12 +156,11 @@ const content = {
       copyright: "© 2025 KESI ZHU • ALL SYSTEMS OPERATIONAL",
     },
     dock: {
-      phone: "COPY PHONE",
-      email: "COPY EMAIL",
-      github: "GITHUB",
+      phone: "PHONE",
+      email: "EMAIL",
       linkedin: "LINKEDIN",
       resume: "RESUME",
-      copied: "COPIED TO CLIPBOARD",
+      copied: "COPIED",
     }
   },
   CN: {
@@ -173,10 +172,10 @@ const content = {
       subRole: "创新产品与商业化落地",
       status: "系统在线",
       version: "KESI_OS_v2.5",
-      location: "浙江大学 · 工业设计硕士",
+      location: "浙江大学 · 工业设计工程硕士 · 27届",
       currentRoleLabel: "当前角色",
       intro: [
-        "浙江大学工业设计工程硕士 (27届)。2家 AI 创业公司联合创始人。曾在科大讯飞与哈啰出行担任 PM。发表 3 篇 EI/IEEE 论文，获 20+ 奖项。",
+        "2家 AI 创业公司联合创始人。曾在科大讯飞与哈啰出行担任 PM。发表 3 篇 EI/IEEE 论文，获 20+ 奖项。",
       ],
       tags: ["AIGC", "AI 工程化", "数据评估", "从0到1"],
     },
@@ -290,12 +289,11 @@ const content = {
       copyright: "© 2025 朱可思 • 所有系统运行正常",
     },
     dock: {
-      phone: "复制电话",
-      email: "复制邮箱",
-      github: "GITHUB",
-      linkedin: "LINKEDIN",
+      phone: "电话",
+      email: "邮箱",
+      linkedin: "领英",
       resume: "简历",
-      copied: "已复制到剪贴板",
+      copied: "已复制",
     }
   }
 };
@@ -317,7 +315,7 @@ function GridBackground() {
       {/* Radial Glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/0 via-zinc-950/60 to-zinc-950" />
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10"
         style={{
           background: "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%)",
           filter: "blur(80px)",
@@ -398,11 +396,6 @@ function Dock({ t }: { t: any }) {
       label: t.dock.email,
     },
     {
-      icon: Github,
-      action: () => window.open("https://github.com/cocojupine", "_blank"),
-      label: t.dock.github,
-    },
-    {
       icon: Linkedin,
       action: () => window.open("https://www.linkedin.com/in/kesi-zhu", "_blank"),
       label: t.dock.linkedin,
@@ -420,24 +413,31 @@ function Dock({ t }: { t: any }) {
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", damping: 20, stiffness: 300, delay: 0.5 }}
-        className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4"
+        className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4"
       >
-        <div className="flex items-center gap-1.5 px-2 py-2 bg-zinc-950/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-black/80 ring-1 ring-white/5">
+        <div className="flex items-center gap-2 md:gap-3 px-3 py-2 bg-zinc-950/90 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl shadow-black/80 ring-1 ring-white/5">
           {controls.map((item, i) => (
             <button
               key={i}
               onClick={item.action}
-              className="relative group p-3 rounded-xl hover:bg-white/10 transition-all active:scale-95"
+              className="relative group p-2 rounded-xl hover:bg-white/10 transition-all active:scale-95 flex flex-col items-center gap-1 min-w-[50px] md:min-w-[auto]"
             >
               <item.icon
-                className="w-5 h-5 text-zinc-400 group-hover:text-white transition-colors"
+                className="w-5 h-5 text-zinc-200 group-hover:text-white transition-colors"
                 strokeWidth={1.5}
               />
-              <span className="absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-900 border border-white/10 text-[9px] font-bold tracking-wider text-zinc-300 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase shadow-xl">
+              {/* Mobile Label (Always visible) */}
+              <span className="text-[9px] font-medium text-zinc-400 md:hidden uppercase tracking-tight">
                 {item.label}
               </span>
+              
+              {/* Desktop Tooltip (Hover only) */}
+              <span className="hidden md:block absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-900 border border-white/10 text-[9px] font-bold tracking-wider text-zinc-300 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase shadow-xl">
+                {item.label}
+              </span>
+              
               {/* Active Indicator */}
-              <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="hidden md:block absolute bottom-0.5 left-1/2 -translate-x-1/2 w-0.5 h-0.5 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
           ))}
         </div>
@@ -449,7 +449,7 @@ function Dock({ t }: { t: any }) {
             initial={{ opacity: 0, y: 10, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
             exit={{ opacity: 0, y: -10, x: "-50%" }}
-            className="fixed bottom-32 left-1/2 z-50 flex items-center gap-3 px-5 py-2.5 bg-emerald-950 border border-emerald-500/30 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.2)]"
+            className="fixed bottom-36 left-1/2 z-50 flex items-center gap-3 px-5 py-2.5 bg-emerald-950 border border-emerald-500/30 rounded-full shadow-[0_0_20px_rgba(16,185,129,0.2)]"
           >
             <div className="bg-emerald-500/20 p-1 rounded-full">
               <Check className="w-3 h-3 text-emerald-400" strokeWidth={3} />
@@ -520,7 +520,7 @@ export default function Home() {
       <GridBackground />
       <StatusBar lang={lang} setLang={setLang} t={t} />
 
-      <div className="relative z-10 max-w-2xl mx-auto px-6 pt-32 md:pt-40">
+      <div className="relative z-10 max-w-3xl mx-auto px-6 pt-32 md:pt-40">
         {/* HERO SECTION */}
         <motion.section
           initial={{ opacity: 0, filter: "blur(10px)" }}
@@ -537,7 +537,7 @@ export default function Home() {
                 <span className="w-1.5 h-1.5 bg-emerald-500 rounded-sm" />
                 {t.hero.location}
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white leading-[0.9] mix-blend-screen">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white leading-[0.9] mix-blend-screen">
                 {t.hero.firstName}
                 <br />
                 <span className="text-zinc-600">{t.hero.lastName}</span>
@@ -560,7 +560,7 @@ export default function Home() {
           className="mb-24"
         >
           <SectionHeader index="01" title={t.sections.skills} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {t.skills.map((s, i) => (
               <div key={i} className="group p-5 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all hover:border-white/10">
                 <h4 className="text-sm font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors flex items-center gap-2">
@@ -620,7 +620,7 @@ export default function Home() {
                   ))}
                 </div>
 
-                <p className="text-[11px] leading-relaxed text-zinc-500">
+                <p className="text-[11px] leading-relaxed text-zinc-500 max-w-3xl">
                   {exp.detail}
                 </p>
               </div>
@@ -628,7 +628,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* PROJECTS (Enhanced with Cover) */}
+        {/* PROJECTS (Enhanced with Tilt & Cover) */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -636,77 +636,88 @@ export default function Home() {
           className="mb-16"
         >
           <SectionHeader index="03" title={t.sections.projects} />
-          <div className="grid gap-8">
-            {t.projects.map((p) => (
-              <div
-                key={p.id}
-                className="group relative border border-white/10 bg-zinc-900/30 rounded-lg overflow-hidden hover:border-white/20 transition-all"
-              >
-                {/* Project Cover - Full Width but Low Height to keep density */}
-                <div className="h-48 overflow-hidden relative border-b border-white/5 bg-zinc-950">
-                  {p.image ? (
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      className="object-cover opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0"
-                    />
-                  ) : p.video ? (
-                    <video
-                      src={p.video}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover opacity-60 group-hover:opacity-90 transition-opacity grayscale group-hover:grayscale-0"
-                    />
-                  ) : (
-                     <div className="w-full h-full flex items-center justify-center bg-zinc-900 text-zinc-700 micro-text tracking-widest">
-                       NO SIGNAL
-                     </div>
-                  )}
-                  {/* Overlay Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80" />
-                  
-                  {/* Badge */}
-                  <div className="absolute top-4 right-4 z-10">
-                     <div className="bg-black/50 backdrop-blur-md border border-white/10 px-2 py-1 rounded text-[9px] font-bold text-white tracking-wider flex items-center gap-1.5">
-                       <span className={`w-1.5 h-1.5 rounded-full ${p.id === '03' ? 'bg-amber-500' : p.id === '04' ? 'bg-zinc-500' : 'bg-emerald-500'}`} />
-                       {p.statLabel}
-                     </div>
-                  </div>
-                </div>
-
-                <div className="p-5 relative">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <div className="micro-text text-emerald-500 mb-1">{p.type}</div>
-                      <h3 className="text-lg font-bold text-white tracking-tight group-hover:text-emerald-50 group-hover:translate-x-1 transition-all">
-                        {p.name}
-                      </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {t.projects.map((p) => {
+              const CardContent = (
+                <motion.div
+                  whileHover={{ y: -3, scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  className="group relative border border-white/5 bg-zinc-900/20 rounded-lg overflow-hidden hover:border-white/15 hover:bg-zinc-900/40 transition-all cursor-pointer shadow-lg shadow-black/20 h-full flex flex-col"
+                >
+                  {/* Project Cover - 3:2 Aspect Ratio */}
+                  <div className="aspect-[3/2] overflow-hidden relative border-b border-white/5 bg-zinc-950 shrink-0">
+                    {p.image ? (
+                      <Image
+                        src={p.image}
+                        alt={p.name}
+                        fill
+                        className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0"
+                      />
+                    ) : p.video ? (
+                      <video
+                        src={p.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                      />
+                    ) : (
+                       <div className="w-full h-full flex items-center justify-center bg-zinc-900 text-zinc-700 micro-text tracking-widest">
+                         NO SIGNAL
+                       </div>
+                    )}
+                    
+                    {/* Badge - Positioned inside image */}
+                    <div className="absolute top-2 right-2 z-10">
+                       <div className="bg-black/60 backdrop-blur-md border border-white/10 px-1.5 py-0.5 rounded-[2px] text-[8px] font-bold text-white tracking-wider flex items-center gap-1 shadow-lg">
+                         <span className={`w-1 h-1 rounded-full ${p.id === '03' ? 'bg-amber-500' : p.id === '04' ? 'bg-zinc-500' : 'bg-emerald-500'}`} />
+                         {p.statLabel}
+                       </div>
                     </div>
-                    {/* Optional: Add stat here if needed, or keep minimal */}
                   </div>
 
-                  <p className="text-[11px] leading-relaxed text-zinc-400 mb-5 max-w-md">
-                    {p.desc}
-                  </p>
+                  {/* Content - Below Image */}
+                  <div className="p-3 bg-white/[0.01] backdrop-blur-sm relative border-t border-white/5 flex-1 flex flex-col">
+                    <div className="flex justify-between items-start mb-1.5">
+                      <div>
+                        <div className="micro-text text-emerald-500/80 mb-0.5 text-[8px]">{p.type}</div>
+                        <h3 className="text-xs font-bold text-zinc-200 tracking-tight group-hover:text-emerald-50 transition-colors leading-tight">
+                          {p.name}
+                        </h3>
+                      </div>
+                    </div>
 
-                  {p.link ? (
-                    <div className="flex items-center gap-2 micro-text text-zinc-500 group-hover:text-white transition-colors">
-                      <span className="tracking-widest border-b border-transparent group-hover:border-white transition-colors pb-0.5">
+                    <p className="text-[9px] leading-relaxed text-zinc-500 mb-2 line-clamp-2 group-hover:text-zinc-400 transition-colors flex-1">
+                      {p.desc}
+                    </p>
+
+                    {p.link ? (
+                      <div className="flex items-center gap-1.5 micro-text text-zinc-600 group-hover:text-zinc-300 transition-colors text-[8px] mt-auto">
+                        <span className="tracking-widest border-b border-transparent group-hover:border-zinc-300 transition-colors pb-px">
+                          {p.cta}
+                        </span>
+                        <ArrowUpRight className="w-2.5 h-2.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </div>
+                    ) : (
+                      <div className="micro-text text-zinc-700 cursor-not-allowed text-[8px] mt-auto">
                         {p.cta}
-                      </span>
-                      <ArrowUpRight className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </div>
-                  ) : (
-                    <div className="micro-text text-zinc-600 cursor-not-allowed">
-                      {p.cta}
-                    </div>
-                  )}
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              );
+
+              return p.link ? (
+                <Link key={p.id} href={p.link} className="block h-full">
+                  {CardContent}
+                </Link>
+              ) : (
+                <div key={p.id} className="block h-full">
+                  {CardContent}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </motion.section>
 
