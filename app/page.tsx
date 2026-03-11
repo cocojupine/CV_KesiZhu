@@ -4,13 +4,12 @@ export default function Home() {
       
       {/* 1. 首屏 Hero Section */}
       <section className="flex flex-col gap-6 mt-12">
-        <h2 className="text-zinc-400 text-xl tracking-wider font-medium">Kesi (Cozy) Zhu</h2>
+        <h2 className="text-zinc-400 text-xl tracking-wider font-medium">Cozy Zhu</h2>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-          懂 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]">AI 工程</span>与<br />
-          工业设计的<br />跨学科产品经理
+          AI 工程与商业化的<br />创新型产品经理
         </h1>
         <p className="text-zinc-400 max-w-2xl text-lg leading-relaxed mt-4">
-          浙江大学工业设计工程硕士。拥有 2 家 AI 初创公司联合创始人经验，主导过跨境直播与家装 SaaS 产品的从 0 到 1。热衷于用极客精神解决真实的商业问题。
+          浙江大学27届工业设计工程硕士。2家AI Start up联合创始人，主导AI家装与跨境直播 SaaS 产品的从 0 到 1。曾在头部大厂（AI 医疗、共享出行）担任 PM 。获20 + 计算机/设计/创业类奖项，发表 3 篇 EI / IEEE 收录的国际论文，参与2项Global项目。
         </p>
         
         <div className="flex flex-wrap items-center gap-4 mt-8">
@@ -27,23 +26,47 @@ export default function Home() {
           <div className="glass-card flex flex-col gap-5">
             <h4 className="text-xl font-medium text-white flex items-center gap-2"><span className="text-[#8b5cf6]">✦</span> AI 工程与评估</h4>
             <div className="flex flex-wrap gap-2">
-              <span className="glass-badge">Cursor / Windsurf</span>
-              <span className="glass-badge">ComfyUI / LoRA</span>
-              <span className="glass-badge">LLM 定量评估</span>
+              <span className="glass-badge">Ai Coding</span>
+              <span className="glass-badge">LLM 评估</span>
+              <span className="glass-badge">多模态</span>
+              <span className="glass-badge">AIGC工作流</span>
             </div>
             <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
-              ↳ 构建端到端多模态工作流，将单功能生成成本骤降 70%；目前正独立全栈开发效率优化智能体（Learning Agent）并计划开源。
+              ↳构建端到端的多模态工作流，单功能成本降低 70%；协助构建AIGC多模态评价系统，具备 AI 工具链重度使用与二次开发能力。
             </p>
           </div>
           <div className="glass-card flex flex-col gap-5">
-            <h4 className="text-xl font-medium text-white flex items-center gap-2"><span className="text-[#06b6d4]">✦</span> 产品架构与策略</h4>
+            <h4 className="text-xl font-medium text-white flex items-center gap-2"><span className="text-[#06b6d4]">✦</span> 产品架构与数据策略</h4>
             <div className="flex flex-wrap gap-2">
-              <span className="glass-badge">B2B/SaaS 架构</span>
-              <span className="glass-badge">DAU/GMV 拆解</span>
-              <span className="glass-badge">SQL & Text2SQL</span>
+              <span className="glass-badge">B2B/SaaS 架构设计</span>
+              <span className="glass-badge">MVP 快速验证</span>
+              <span className="glass-badge">QFD 评价模型</span>
+              <span className="glass-badge">SQL / 核心指标拆解</span>
             </div>
             <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
-              ↳ 引入 QFD 模型驱动哈啰出行硬件体验评价体系建立；从 0 到 1 定义“獭獭搭家”电商底层商品资产数据结构。
+              ↳ 创业经历及owner视角，从 0 到 1 定义"獭獭搭家"资产数据结构，哈啰出行硬件体验量化评价体系建立。
+            </p>
+          </div>
+          <div className="glass-card flex flex-col gap-5">
+            <h4 className="text-xl font-medium text-white flex items-center gap-2"><span className="text-[#f59e0b]">✦</span> 用户体验与原型</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="glass-badge">Figma</span>
+              <span className="glass-badge">Axure</span>
+              <span className="glass-badge">UI/UX 迭代</span>
+              <span className="glass-badge">Kano 模型</span>
+            </div>
+            <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
+              ↳ 深度梳理并协助重构科大讯飞Ai医疗系统复杂 B 端 G 端界面逻辑；主导完成"獭獭搭家"UX原型构建。
+            </p>
+          </div>
+          <div className="glass-card flex flex-col gap-5">
+            <h4 className="text-xl font-medium text-white flex items-center gap-2"><span className="text-[#10b981]">✦</span> 国际视野与研究</h4>
+            <div className="flex flex-wrap gap-2">
+              <span className="glass-badge">商业数据分析</span>
+              <span className="glass-badge">跨国项目协同</span>
+            </div>
+            <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
+              ↳ 发表 3 篇 EI/IEEE 国际学术论文；南洋理工AI商业分析训练营优秀成员，KTH 瑞典皇家理工交换生，THS Global & Armarda。
             </p>
           </div>
         </div>
@@ -58,19 +81,52 @@ export default function Home() {
           <div className="glass-card flex flex-col lg:flex-row gap-8 items-center group overflow-hidden">
             <div className="flex-1 flex flex-col gap-5 relative z-10">
               <h4 className="text-2xl font-bold text-white group-hover:text-[#06b6d4] transition-colors">
-                獭獭搭家 <span className="text-sm font-normal text-zinc-500 ml-2">| B2B2C 家装 SaaS</span>
+                獭獭搭家 <span className="text-sm font-normal text-zinc-500 ml-2">| AI 驱动的家装 B2B2C SaaS 平台</span>
               </h4>
               <div className="flex flex-wrap gap-2">
-                <span className="glass-badge border-[#06b6d4]/30 text-[#06b6d4]">产品研发负责人</span>
+                <span className="glass-badge border-[#06b6d4]/30 text-[#06b6d4]">联合创始人 / 产品研发负责人</span>
                 <span className="glass-badge">B2B SaaS 架构</span>
+                <span className="glass-badge">自建工作流</span>
+                <span className="glass-badge">电商 SKU/SPU 体系</span>
               </div>
               <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-                打破“灵感生成”到“真实购买”闭环的 AI 平台。为 C 端提供一键可视化的极简设计体验，并自动精准匹配真实电商 SKU。同时为 B 端装企开发了深度的后台管理系统。
+                打通"灵感生成"到"真实购买"闭环的 AI 家装平台。对 C 端用户提供一键可视化的极简设计体验，对 B 端装企与家具商提供高效的商品资产渲染与管理后台。与27家工作室、装修公司合作，获杭州良仓基地最具投资潜力奖。
               </p>
+              <div className="flex flex-col gap-3 mt-2">
+                <div>
+                  <p className="text-xs text-zinc-500 mb-1">C 端体验：1 分钟可视化生成与自动适配</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    用户输入需求后，系统快速生成高保真效果图，并精准识别图内风格，自动从数据库中匹配可购买的真实家具链接。
+                  </p>
+                </div>
+                <div className="w-full h-48 rounded-xl overflow-hidden border border-white/10 relative">
+                  <video src="/tatadajia_phone.webm" className="w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <span className="absolute bottom-2 right-2 text-xs text-zinc-500 bg-black/50 px-2 py-1 rounded">tatadajia_phone.webm</span>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 mt-2">
+                <div>
+                  <p className="text-xs text-zinc-500 mb-1">B 端 SaaS：高效的资产与工作流管理</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">
+                    为 B 端客户（家居厂商）开发深度后台管理系统，重构电商 SKU+SPU 数据结构，支持通过 API 追踪每一次生成任务，并对生成的家具资产进行精细化状态管理。
+                  </p>
+                </div>
+                <div className="w-full h-48 rounded-xl overflow-hidden border border-white/10 relative">
+                  <img src="/tatadajia_web.png" alt="SaaS商家后台管理系统" className="w-full h-full object-cover" />
+                  <span className="absolute bottom-2 right-2 text-xs text-zinc-500 bg-black/50 px-2 py-1 rounded">tatadajia_web.png</span>
+                </div>
+              </div>
+              <div className="p-4 bg-zinc-900/50 rounded-xl border border-white/5 mt-2">
+                <h5 className="text-white font-medium mb-2">工程架构降本与商业闭环</h5>
+                <ul className="text-sm text-zinc-400 space-y-1">
+                  <li>• 深入业务底层，自建生图工作流，建立"风格模板库+家具品类模型"库</li>
+                  <li>• 通过本地化部署与海内外 API 成本核算，成功将单功能生成成本大幅降低 70%</li>
+                  <li>• 完成向 B2B2C 模式的战略升级，成功验证 AIGC 在装企谈单场景下的商业化变现潜力</li>
+                </ul>
+              </div>
             </div>
-            <div className="w-full lg:w-[45%] flex relative h-64 rounded-2xl overflow-hidden border border-white/10">
-               <img src="/assets/tatadajia-b.jpg" alt="SaaS商家后台" className="w-2/3 h-full object-cover absolute left-0 opacity-60" />
-               <img src="/assets/tatadajia-c.jpg" alt="C端生成结果页" className="w-1/2 h-full object-cover absolute right-0 shadow-[0_0_30px_rgba(0,0,0,0.8)]" />
+            <div className="w-full lg:w-[45%] flex relative h-64 lg:h-auto rounded-2xl overflow-hidden border border-white/10">
+               <img src="/tatadajia_cover.png" alt="獭獭搭家封面" className="w-full h-full object-cover" />
             </div>
           </div>
 
