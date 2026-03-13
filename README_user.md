@@ -33,8 +33,12 @@ The website follows a "Hub & Spoke" conversion funnel:
 
 *   **Visual Style:** "Dark Wireframe Mobile OS". High-tech, industrial, precision-engineered aesthetic.
 *   **Theme:** Dark Mode Only. Deep dark backgrounds (`bg-black`, `bg-zinc-950`).
+*   **Layout:** "Senior UI" Standard.
+    *   **Container:** `max-w-6xl` (Wide, spacious layout).
+    *   **Spacing:** Generous gaps (`gap-16`, `gap-32`, `mb-32`) to create visual breathing room.
 *   **Typography:**
     *   **Primary (Sans):** `Inter` (via `next/font/google`). Used for headings and body.
+        *   **Scale:** Hero H1 (`6xl/8xl`), Body (`text-lg`), Labels (`text-xs`).
     *   **Secondary (Mono):** `JetBrains Mono`. Used for tags, metadata, and "code-like" UI elements.
 *   **Project Cards:**
     *   **Aspect Ratio:** 3:2 for covers.
