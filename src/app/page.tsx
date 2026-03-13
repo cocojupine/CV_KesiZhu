@@ -76,30 +76,30 @@ const content = {
     ],
     experience: [
       {
-        company: "SINGULARITY LEAP",
+        company: "SINGULARITY LEAP · START-UP",
         role: "CO-FOUNDER",
-        period: "2023-2024",
+        period: "2025.06-2026.03",
         tags: ["0-1 OWNER", "AIGC", "SAAS"],
         detail: "Otter's Home AIGC Interior Design SaaS. 1-min generation. Built B2B2C model & asset mgmt system. Microsoft Fund supported.",
       },
       {
-        company: "ACUISPIRE HK",
+        company: "ACUISPIRE · HK INDUSTRY-UNIVERSITY",
         role: "CO-FOUNDER",
-        period: "2024",
-        tags: ["AGENT", "AI FLOW", "GROWTH"],
+        period: "2025.03-2026.06",
+        tags: ["AGENT", "AI FLOW", "INTERACTION"],
         detail: "PiLive Cross-border Livestream AI Tool. Product & AI Engineer. Joint paper with PolyU NVIDIA Lab. ByteDance AI platform supported.",
       },
       {
         company: "IFLYTEK",
         role: "PM INTERN (AI HEALTHCARE)",
-        period: "2023",
+        period: "2023.12-2024.02",
         tags: ["B-END", "CDSS", "VTE"],
         detail: "Deep involvement in CDSS, VTE, and Medical Record QC systems. Requirements definition & iteration for provincial-level hospital systems.",
       },
       {
         company: "HELLO INC",
         role: "PM INTERN (IOT HARDWARE)",
-        period: "2022",
+        period: "2024.03-2024.08",
         tags: ["DATA ANALYSIS", "QFD", "MVP"],
         detail: "Hardware accessory innovation MVP. Increased turnover rate by ~2%. Established internal quantitative evaluation metrics using QFD.",
       },
@@ -130,19 +130,20 @@ const content = {
       {
         id: "03",
         name: "LEARNING AGENT",
-        type: "OPEN SOURCE TOOL",
+        type: "OPEN SOURCE",
         stat: "BUILDING",
         statLabel: "IN PROGRESS",
         desc: "Efficiency agent integrating full-site information. Currently under development.",
+        link: "https://github.com/bohemiaer/PWA-stairt",
         cta: "COMING SOON",
         image: "/assets/LearningAgent_cover.png",
       },
       {
         id: "04",
         name: "FOCUS TIMER",
-        type: "UNITY UX CONCEPT",
-        stat: "CONCEPT",
-        statLabel: "UNITY 3D",
+        type: "CODING WITH UNITY",
+        stat: "OPEN SOURCE",
+        statLabel: "OPEN SOURCE",
         desc: "Gamified Pomodoro timer developed with Unity engine.",
         cta: "CONCEPT ONLY",
         video: "/assets/Unity.webm",
@@ -150,10 +151,8 @@ const content = {
     ],
     footer: {
       end: "END OF LINE.",
-      question: "Want to know more about my journey from Industrial Design to AI Engineering?",
-      cta: "Read Full Bio",
       status: "SYSTEM STATUS: NORMAL • LATENCY: 12ms",
-      copyright: "© 2025 KESI ZHU • ALL SYSTEMS OPERATIONAL",
+      copyright: "© 2025 COZY ZHU • ALL SYSTEMS OPERATIONAL",
     },
     dock: {
       phone: "PHONE",
@@ -209,30 +208,30 @@ const content = {
     ],
     experience: [
       {
-        company: "奇点跃迁 · Singularity Leap",
+        company: "奇点跃迁 · Start—up",
         role: "联合创始人",
-        period: "2023-2024",
+        period: "2025.06-2026.03",
         tags: ["从0到1", "AIGC", "SAAS"],
         detail: "獭獭搭家 AIGC 室内设计 SaaS。1分钟生成方案。构建 B2B2C 模式与资产系统。获微软创业基金支持。",
       },
       {
-        company: "Acuispire HK",
+        company: "Acuispire · 香港产学研公司",
         role: "联合创始人",
-        period: "2024",
-        tags: ["AGENT", "AI FLOW", "增长"],
-        detail: "PiLive 跨境直播 AI 互动工具。负责产品与 AI Flow。与港理 NVIDIA 实验室合著论文。获字节 AI 平台支持。",
+        period: "2025.03-2026.06",
+        tags: ["AGENT", "AI FLOW", "互动策略"],
+        detail: "PiLive 跨境直播 AI 互动工具。作为产品和Ai Engineer。与港理 NVIDIA 实验室合著论文。获字节 AI 平台支持。",
       },
       {
         company: "科大讯飞 · iFLYTEK",
         role: "PM 实习生 (AI 医疗)",
-        period: "2023",
+        period: "2023.12-2024.02",
         tags: ["B端产品", "CDSS", "VTE"],
         detail: "深度参与 CDSS、VTE 及病历质控 3 大核心 B 端系统。负责省级医院系统的需求定义与迭代。",
       },
       {
         company: "哈啰出行 · Hello Inc",
         role: "PM 实习生 (智能硬件)",
-        period: "2022",
+        period: "2024.03-2024.08",
         tags: ["数据分析", "QFD", "MVP"],
         detail: "硬件配件创新 MVP。拉动翻台率提升约 2%。引入 QFD 模型建立量化内部评价指标。",
       },
@@ -263,19 +262,20 @@ const content = {
       {
         id: "03",
         name: "Learning Agent",
-        type: "开源工具",
+        type: "Gitub开源",
         stat: "开发中",
         statLabel: "BUILDING",
         desc: "整合全站信息的效率智能体。目前正在开发中。",
+        link: "https://github.com/bohemiaer/PWA-stairt",
         cta: "敬请期待",
         image: "/assets/LearningAgent_cover.png",
       },
       {
         id: "04",
         name: "Focus Timer",
-        type: "UNITY UX 概念",
-        stat: "概念稿",
-        statLabel: "UNITY 3D",
+        type: "CODING WITH UNITY",
+        stat: "Gitub开源",
+        statLabel: "Gitub开源",
         desc: "基于 Unity 引擎开发的游戏化番茄钟。",
         cta: "仅展示概念",
         video: "/assets/Unity.webm",
@@ -283,10 +283,8 @@ const content = {
     ],
     footer: {
       end: "END OF LINE.",
-      question: "想了解更多从工业设计到 AI 工程化的心路历程？",
-      cta: "阅读完整自述",
       status: "系统状态：正常 • 延迟：12ms",
-      copyright: "© 2025 朱可思 • 所有系统运行正常",
+      copyright: "© 2025 COZY ZHU • 所有系统运行正常",
     },
     dock: {
       phone: "电话",
@@ -415,7 +413,7 @@ function Dock({ t }: { t: any }) {
         transition={{ type: "spring", damping: 20, stiffness: 300, delay: 0.5 }}
         className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4"
       >
-        <div className="flex items-center gap-2 md:gap-3 px-3 py-2 bg-zinc-950/90 backdrop-blur-xl border border-white/15 rounded-2xl shadow-2xl shadow-black/80 ring-1 ring-white/5">
+        <div className="flex items-center gap-2 md:gap-3 px-3 py-2 bg-zinc-900/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl shadow-black/80 ring-1 ring-white/10">
           {controls.map((item, i) => (
             <button
               key={i}
@@ -509,7 +507,7 @@ function HeroIntro({ text, tags }: { text: string[]; tags: string[] }) {
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
-  const [lang, setLang] = useState<Lang>("EN");
+  const [lang, setLang] = useState<Lang>("CN");
   const t = content[lang];
   
   // Unified font class
@@ -651,7 +649,7 @@ export default function Home() {
                         src={p.image}
                         alt={p.name}
                         fill
-                        className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0"
+                        className="object-cover group-hover:scale-105 transition-all duration-700"
                       />
                     ) : p.video ? (
                       <video
@@ -660,7 +658,7 @@ export default function Home() {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0"
+                        className="w-full h-full object-cover"
                       />
                     ) : (
                        <div className="w-full h-full flex items-center justify-center bg-zinc-900 text-zinc-700 micro-text tracking-widest">
@@ -729,15 +727,6 @@ export default function Home() {
            className="mt-20 p-8 border border-dashed border-white/10 rounded-lg text-center"
         >
            <h3 className="text-white text-lg font-bold mb-2">{t.footer.end}</h3>
-           <p className="text-xs text-zinc-500 mb-6 max-w-xs mx-auto">
-             {t.footer.question}
-           </p>
-           <a
-             href="/about"
-             className="inline-flex items-center gap-2 px-6 py-2 bg-zinc-900 border border-white/10 hover:bg-white hover:text-black hover:border-white transition-all text-xs font-bold tracking-widest uppercase rounded-sm"
-           >
-             {t.footer.cta} <ArrowUpRight className="w-3 h-3" />
-           </a>
         </motion.div>
 
         <footer className="mt-20 pt-8 border-t border-white/10 text-center micro-text text-zinc-700 font-mono">
