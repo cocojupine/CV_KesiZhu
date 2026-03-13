@@ -11,47 +11,48 @@
 *   **Theme:** Dark Mode Only (`bg-black`, `text-zinc-300`)
 *   **Font:** `Inter` (Body) + `JetBrains Mono` (Metadata/Tags)
 
-## 2. Layout Structure (Senior UI - Spacious)
+## 2. Layout Structure (Senior UI - Macro Scale)
 The page uses a **Sticky Sidebar + Scrollable Content** layout with a wide, high-impact container.
 
-*   **Container:** `max-w-6xl mx-auto px-6` (Optimized for "Senior UI" feel - Spacious & Bold)
+*   **Container:** `max-w-6xl mx-auto px-6`
 *   **Grid System:** `grid-cols-1 md:grid-cols-[240px_1fr]`
-    *   **Left Column (240px):** Sticky Metadata (Role, Tech Stack, Key Metrics). Stays fixed while scrolling on Desktop. Hidden on Mobile.
-    *   **Right Column (1fr):** Narrative Content (Problem, Solution, Impact).
-    *   **Gap:** `gap-16 md:gap-32` (Extremely generous spacing for visual breathing room)
+    *   **Left Column (240px):** Sticky Metadata. Stays fixed while scrolling on Desktop. Hidden on Mobile.
+    *   **Right Column (1fr):** Narrative Content.
+    *   **Gap:** `gap-16 md:gap-32` (Generous spacing)
 
 ## 3. UI Components & Styling
 
-### 3.1. Typography (Macro-Typography System)
-*   **Hero H1:** `text-6xl md:text-8xl font-bold text-white tracking-tight leading-none`
-*   **Hero H2 (Subtitle):** `text-3xl md:text-5xl font-medium text-zinc-500`
-*   **Section Headers:** `text-2xl md:text-4xl font-bold text-white tracking-tight`
-*   **Body Text:** `text-lg leading-relaxed text-zinc-400 text-justify` (Increased readability)
-*   **Labels/Tags:** `text-xs font-bold tracking-wider uppercase font-mono`
+### 3.1. Typography (Macro System)
+*   **Hero H1:** `text-7xl md:text-9xl font-bold text-white tracking-tight leading-none`
+*   **Hero H2 (Subtitle):** `text-4xl md:text-6xl font-medium text-zinc-500`
+*   **Section Headers:** `text-4xl md:text-6xl font-bold text-white tracking-tight mb-10`
+*   **Body Text:** `text-xl leading-relaxed text-zinc-400 text-justify` (Editorial Standard)
+*   **Labels/Tags:** `text-sm font-bold tracking-wider uppercase font-mono` (No micro-text)
 
 ### 3.2. Visual Elements
 *   **Background:** `GridBackground` (Subtle 40px grid with radial fade).
 *   **Cards/Containers:**
+    *   Padding: `p-8` or `p-10` (Spacious)
     *   Border: `border border-white/5`
-    *   Background: `bg-zinc-900/20`
+    *   Background: `bg-zinc-900/30`
     *   Effect: `backdrop-blur-sm` (Glassmorphism)
-    *   Radius: `rounded-xl` or `rounded-2xl`
-*   **Icons:** `lucide-react` (Size `w-5 h-5` or `w-6 h-6`).
+    *   Radius: `rounded-2xl`
+*   **Icons:** `lucide-react` (Size `w-8 h-8` or `w-10 h-10`).
 
 ## 4. Content Schema (Data Distribution)
 
 ### 4.1. Hero Section (Header)
-*   **Tags:** `[PROJECT TYPE]` | `[YEAR]` (Pill badges, `text-xs` or `text-sm`)
+*   **Tags:** `[PROJECT TYPE]` | `[YEAR]` (Pill badges, `text-sm`)
 *   **Title:** `[ENGLISH PROJECT NAME]`
 *   **Subtitle:** `[CHINESE PROJECT NAME]`
-*   **Summary:** Short elevator pitch (max 2 lines). `text-xl text-zinc-400`.
+*   **Summary:** Short elevator pitch (max 2 lines). `text-xl md:text-2xl text-zinc-400`.
 
 ### 4.2. Metadata Sidebar (Sticky)
-*   **Role:** List of roles (e.g., Co-Founder, Product Owner).
-*   **Tech Stack:** Array of tags (e.g., Next.js, Python, AI Agent).
+*   **Role:** List of roles (e.g., Co-Founder, Product Owner). `text-lg`.
+*   **Tech Stack:** Array of tags. `text-base` tags.
 *   **Key Metrics (Impact):**
     *   Display 2 key quantitative results.
-    *   Format: Large Number (`text-2xl font-mono text-emerald-400`) + Label (`text-[10px] uppercase`).
+    *   Format: Large Number (`text-4xl font-mono text-emerald-400`) + Label (`text-sm uppercase`).
 
 ### 4.3. Narrative Sections (Article)
 1.  **01_项目背景 (Context):**
