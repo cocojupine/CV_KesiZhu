@@ -362,11 +362,11 @@ function StatusBar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => voi
 
 function SectionHeader({ title, index }: { title: string; index: string }) {
   return (
-    <div className="flex items-center gap-4 mb-12">
-      <span className="text-xs font-mono text-emerald-500/80 bg-emerald-500/10 px-2 py-1 rounded-sm border border-emerald-500/20">
+    <div className="flex items-center gap-3 mb-8">
+      <span className="text-[10px] font-mono text-emerald-500/80 bg-emerald-500/10 px-1.5 py-0.5 rounded-sm border border-emerald-500/20">
         {index}
       </span>
-      <h3 className="text-sm md:text-base tracking-[0.3em] font-bold text-zinc-200 uppercase">{title}</h3>
+      <h3 className="text-xs tracking-[0.25em] font-bold text-zinc-200 uppercase">{title}</h3>
       <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
     </div>
   );
@@ -413,15 +413,15 @@ function Dock({ t }: { t: any }) {
         transition={{ type: "spring", damping: 20, stiffness: 300, delay: 0.5 }}
         className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4"
       >
-        <div className="flex items-center gap-4 px-4 py-3 bg-zinc-900/90 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl shadow-black/80 ring-1 ring-white/10">
+        <div className="flex items-center gap-2 md:gap-3 px-3 py-2 bg-zinc-900/90 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl shadow-black/80 ring-1 ring-white/10">
           {controls.map((item, i) => (
             <button
               key={i}
               onClick={item.action}
-              className="relative group p-3 rounded-2xl hover:bg-white/10 transition-all active:scale-95 flex flex-col items-center gap-1 min-w-[60px] md:min-w-[auto]"
+              className="relative group p-2 rounded-xl hover:bg-white/10 transition-all active:scale-95 flex flex-col items-center gap-1 min-w-[50px] md:min-w-[auto]"
             >
               <item.icon
-                className="w-6 h-6 text-zinc-200 group-hover:text-white transition-colors"
+                className="w-5 h-5 text-zinc-200 group-hover:text-white transition-colors"
                 strokeWidth={1.5}
               />
               {/* Mobile Label (Always visible) */}
@@ -481,19 +481,19 @@ function HeroIntro({ text, tags }: { text: string[]; tags: string[] }) {
   };
 
   return (
-    <div className="border-t border-white/10 pt-8">
-      <div className="text-lg md:text-xl leading-relaxed text-zinc-400 max-w-2xl mb-8 font-sans">
+    <div className="border-t border-white/10 pt-6">
+      <div className="text-base md:text-lg leading-relaxed text-zinc-400 max-w-lg mb-6 font-sans">
         {text.map((paragraph, i) => (
-          <p key={i} className="mb-4">
+          <p key={i} className="mb-2">
             {highlightKeywords(paragraph)}
           </p>
         ))}
       </div>
-      <div className="flex flex-wrap gap-x-8 gap-y-4">
+      <div className="flex flex-wrap gap-x-6 gap-y-2">
         {tags.map((tag, i) => (
           <span
             key={i}
-            className="text-base text-zinc-500 hover:text-emerald-400 transition-colors cursor-default font-mono tracking-wide"
+            className="text-sm text-zinc-500 hover:text-emerald-400 transition-colors cursor-default font-mono tracking-wide"
           >
             [{tag}]
           </span>
@@ -531,19 +531,19 @@ export default function Home() {
           
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <div className="text-emerald-500 mb-4 flex items-center gap-2 text-base md:text-lg tracking-widest font-mono">
-                <span className="w-2.5 h-2.5 bg-emerald-500 rounded-sm" />
+              <div className="micro-text text-emerald-500 mb-3 flex items-center gap-2 text-sm md:text-base tracking-widest">
+                <span className="w-2 h-2 bg-emerald-500 rounded-sm" />
                 {t.hero.location}
               </div>
-              <h1 className="text-7xl md:text-9xl font-bold tracking-tighter text-white leading-[0.9] mix-blend-screen mb-4">
+              <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-white leading-[0.9] mix-blend-screen mb-2">
                 {t.hero.firstName}
                 <br />
                 <span className="text-zinc-600">{t.hero.lastName}</span>
               </h1>
             </div>
             <div className="md:text-right">
-              <div className="text-zinc-500 mb-2 text-sm md:text-base tracking-widest font-mono uppercase">{t.hero.currentRoleLabel}</div>
-              <div className="text-xl md:text-2xl font-bold text-white tracking-widest">{t.hero.role}</div>
+              <div className="micro-text text-zinc-500 mb-2 text-xs md:text-sm tracking-widest">{t.hero.currentRoleLabel}</div>
+              <div className="text-lg md:text-xl font-bold text-white tracking-widest">{t.hero.role}</div>
             </div>
           </div>
 
@@ -560,24 +560,24 @@ export default function Home() {
           <SectionHeader index="01" title={t.sections.skills} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {t.skills.map((s, i) => (
-              <div key={i} className="group p-10 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all hover:border-white/10 hover:-translate-y-1 duration-300">
-                <h4 className="text-2xl font-bold text-white mb-6 group-hover:text-emerald-400 transition-colors flex items-center gap-4">
-                  <span className="w-2.5 h-2.5 bg-zinc-600 rounded-full group-hover:bg-emerald-500 transition-colors" />
+              <div key={i} className="group p-8 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all hover:border-white/10 hover:-translate-y-1 duration-300">
+                <h4 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors flex items-center gap-3">
+                  <span className="w-2 h-2 bg-zinc-600 rounded-full group-hover:bg-emerald-500 transition-colors" />
                   {s.title}
                 </h4>
                 
-                <div className="flex flex-wrap gap-3 mb-8">
+                <div className="flex flex-wrap gap-2.5 mb-6">
                   {s.tags.map((tag, j) => (
                     <span 
                       key={j} 
-                      className="text-base px-3.5 py-1.5 rounded-full bg-zinc-900/50 border border-white/10 text-zinc-400 font-mono tracking-tight group-hover:border-white/20 group-hover:text-zinc-300 transition-colors"
+                      className="text-sm px-3 py-1.5 rounded-full bg-zinc-900/50 border border-white/10 text-zinc-400 font-mono tracking-tight group-hover:border-white/20 group-hover:text-zinc-300 transition-colors"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
                 
-                <p className="text-lg leading-relaxed text-zinc-400 border-t border-dashed border-white/10 pt-6">
+                <p className="text-base leading-relaxed text-zinc-400 border-t border-dashed border-white/10 pt-4">
                   {s.desc}
                 </p>
               </div>
@@ -596,29 +596,29 @@ export default function Home() {
           <SectionHeader index="02" title={t.sections.experience} />
           <div className="space-y-0 border-l border-white/10 ml-2">
             {t.experience.map((exp, i) => (
-              <div key={i} className="relative pl-12 pb-20 last:pb-0 group">
-                <div className="absolute -left-[6px] top-2.5 w-3 h-3 bg-zinc-800 rounded-full ring-4 ring-black group-hover:bg-emerald-500 transition-colors" />
+              <div key={i} className="relative pl-10 pb-16 last:pb-0 group">
+                <div className="absolute -left-[5px] top-2 w-[9px] h-[9px] bg-zinc-800 rounded-full ring-4 ring-black group-hover:bg-emerald-500 transition-colors" />
                 
-                <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-4">
-                  <h4 className="text-3xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">
+                <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-3">
+                  <h4 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors tracking-tight">
                     {exp.company}
                   </h4>
-                  <span className="text-lg font-mono text-zinc-500">{exp.period}</span>
+                  <span className="text-base font-mono text-zinc-500">{exp.period}</span>
                 </div>
                 
-                <div className="text-base font-bold text-zinc-400 mb-6 tracking-wider uppercase bg-zinc-900/50 inline-block px-4 py-2 rounded border border-white/5">
+                <div className="text-sm font-bold text-zinc-400 mb-4 tracking-wider uppercase bg-zinc-900/50 inline-block px-3 py-1.5 rounded border border-white/5">
                   {exp.role}
                 </div>
                 
-                <div className="flex gap-3 mb-6">
+                <div className="flex gap-2 mb-4">
                   {exp.tags.map((t, j) => (
-                    <span key={j} className="text-base px-4 py-1.5 border border-white/10 rounded-md text-zinc-500 font-mono bg-zinc-900/30">
+                    <span key={j} className="text-sm px-3 py-1 border border-white/10 rounded-md text-zinc-500 font-mono bg-zinc-900/30">
                       {t}
                     </span>
                   ))}
                 </div>
 
-                <p className="text-xl leading-relaxed text-zinc-400 max-w-4xl">
+                <p className="text-lg leading-relaxed text-zinc-400 max-w-4xl">
                   {exp.detail}
                 </p>
               </div>
@@ -676,26 +676,26 @@ export default function Home() {
                   </div>
 
                   {/* Content - Below Image */}
-                  <div className="p-10 bg-white/[0.01] backdrop-blur-sm relative border-t border-white/5 flex-1 flex flex-col">
-                    <div className="flex justify-between items-start mb-6">
+                  <div className="p-8 bg-white/[0.01] backdrop-blur-sm relative border-t border-white/5 flex-1 flex flex-col">
+                    <div className="flex justify-between items-start mb-4">
                       <div>
-                        <div className="text-sm text-emerald-500/80 mb-3 tracking-widest uppercase font-bold">{p.type}</div>
-                        <h3 className="text-3xl font-bold text-zinc-100 tracking-tight group-hover:text-emerald-50 transition-colors leading-tight">
+                        <div className="text-xs text-emerald-500/80 mb-2 tracking-widest uppercase font-bold">{p.type}</div>
+                        <h3 className="text-2xl font-bold text-zinc-100 tracking-tight group-hover:text-emerald-50 transition-colors leading-tight">
                           {p.name}
                         </h3>
                       </div>
                     </div>
 
-                    <p className="text-lg leading-relaxed text-zinc-400 mb-8 line-clamp-3 group-hover:text-zinc-300 transition-colors flex-1">
+                    <p className="text-base leading-relaxed text-zinc-400 mb-6 line-clamp-3 group-hover:text-zinc-300 transition-colors flex-1">
                       {p.desc}
                     </p>
 
                     {p.link ? (
-                      <div className="flex items-center gap-3 text-base font-medium text-zinc-500 group-hover:text-white transition-colors mt-auto">
+                      <div className="flex items-center gap-2 text-sm font-medium text-zinc-500 group-hover:text-white transition-colors mt-auto">
                         <span className="tracking-widest border-b border-transparent group-hover:border-white transition-colors pb-0.5 uppercase">
                           {p.cta}
                         </span>
-                        <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                       </div>
                     ) : (
                       <div className="micro-text text-zinc-700 cursor-not-allowed text-xs mt-auto">

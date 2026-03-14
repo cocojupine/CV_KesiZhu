@@ -26,9 +26,9 @@ function GridBackground() {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-center gap-3 mb-6">
-      <span className="w-1.5 h-1.5 bg-emerald-500 rounded-sm" />
-      <span className="text-xs font-bold tracking-[0.2em] text-zinc-500 uppercase font-mono">{children}</span>
+    <div className="flex items-center gap-2 mb-4">
+      <span className="w-1 h-1 bg-emerald-500 rounded-sm" />
+      <span className="text-[10px] font-bold tracking-[0.15em] text-zinc-500 uppercase font-mono">{children}</span>
     </div>
   );
 }
@@ -62,33 +62,33 @@ export default function OttersHomeProject() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center gap-3 mb-8">
-            <span className="px-3 py-1.5 rounded text-sm font-bold tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="px-2 py-1 rounded text-xs font-bold tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
               B2B2C SAAS
             </span>
-            <span className="px-3 py-1.5 rounded text-sm font-bold tracking-wider bg-zinc-800 text-zinc-400 border border-white/5 font-mono">
+            <span className="px-2 py-1 rounded text-xs font-bold tracking-wider bg-zinc-800 text-zinc-400 border border-white/5 font-mono">
               2023 - 2024
             </span>
           </div>
           
-          <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tight leading-none mb-8">
+          <h1 className="text-6xl md:text-8xl font-bold text-white tracking-tight leading-none mb-6">
             OTTER'S HOME
-            <span className="block text-zinc-500 text-4xl md:text-6xl mt-4 font-medium">AI 室内设计</span>
+            <span className="block text-zinc-500 text-3xl md:text-5xl mt-2 font-medium">AI 室内设计</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl leading-relaxed">
+          <p className="text-lg md:text-xl text-zinc-400 max-w-3xl leading-relaxed">
             AI 驱动的家装 B2B2C SaaS 平台。打通“灵感生成”到“真实购买”闭环，为 27+ 家工作室提供降本增效的数字化解决方案。
           </p>
         </motion.div>
       </header>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-40 grid grid-cols-1 md:grid-cols-[240px_1fr] gap-16 md:gap-32">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-32 grid grid-cols-1 md:grid-cols-[240px_1fr] gap-16 md:gap-32">
         
         {/* Left Column: Sticky Metadata */}
-        <aside className="hidden md:block h-fit sticky top-32 space-y-20">
+        <aside className="hidden md:block h-fit sticky top-32 space-y-16">
           <div>
             <SectionLabel>担任角色</SectionLabel>
-            <ul className="space-y-4 text-lg text-zinc-300 font-medium leading-relaxed">
+            <ul className="space-y-4 text-base text-zinc-300 font-medium leading-relaxed">
               <li className="text-white font-bold">联合创始人</li>
               <li>产品负责人</li>
               <li>工作流架构师</li>
@@ -99,7 +99,7 @@ export default function OttersHomeProject() {
             <SectionLabel>核心技术栈</SectionLabel>
             <div className="flex flex-wrap gap-3">
               {['Stable Diffusion', 'ComfyUI', 'Next.js', 'Python', 'PostgreSQL'].map((tech) => (
-                <span key={tech} className="px-3 py-1.5 rounded bg-zinc-900/50 border border-white/10 text-base text-zinc-400 font-mono">
+                <span key={tech} className="px-3 py-1.5 rounded bg-zinc-900/50 border border-white/10 text-sm text-zinc-400 font-mono">
                   {tech}
                 </span>
               ))}
@@ -108,14 +108,14 @@ export default function OttersHomeProject() {
 
           <div>
             <SectionLabel>核心成果</SectionLabel>
-            <div className="space-y-8">
-              <div className="p-8 bg-zinc-900/30 border border-white/5 rounded-2xl">
-                <div className="text-4xl font-mono font-bold text-emerald-400 mb-2">-70%</div>
-                <div className="text-sm text-zinc-500 uppercase tracking-wider font-bold">生产成本</div>
+            <div className="space-y-6">
+              <div className="p-6 bg-zinc-900/30 border border-white/5 rounded-2xl">
+                <div className="text-3xl font-mono font-bold text-emerald-400 mb-2">-70%</div>
+                <div className="text-xs text-zinc-500 uppercase tracking-wider font-bold">生产成本</div>
               </div>
-              <div className="p-8 bg-zinc-900/30 border border-white/5 rounded-2xl">
-                <div className="text-4xl font-mono font-bold text-white mb-2">27+</div>
-                <div className="text-sm text-zinc-500 uppercase tracking-wider font-bold">B端合作商户</div>
+              <div className="p-6 bg-zinc-900/30 border border-white/5 rounded-2xl">
+                <div className="text-3xl font-mono font-bold text-white mb-2">27+</div>
+                <div className="text-xs text-zinc-500 uppercase tracking-wider font-bold">B端合作商户</div>
               </div>
             </div>
           </div>
@@ -127,21 +127,21 @@ export default function OttersHomeProject() {
           {/* Overview */}
           <section>
             <SectionLabel>01_项目背景</SectionLabel>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tight">从灵感到落地的断层</h2>
-            <p className="text-zinc-400 text-xl leading-relaxed mb-16 text-justify">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">从灵感到落地的断层</h2>
+            <p className="text-zinc-400 text-lg leading-9 mb-12 text-justify">
               市面上的 AI 生图工具多为“玩具”，生成的家具无法在现实中购买；而传统的 3D 建模渲染成本极高且周期长。我们需要利用 AIGC 技术，在“高质量渲染”与“真实供应链落地”之间架起桥梁。
             </p>
             
             <div className="grid grid-cols-2 gap-8">
-              <div className="p-10 bg-zinc-900/30 border border-white/5 rounded-2xl">
-                <Zap className="w-10 h-10 text-amber-400 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wider">高昂成本</h3>
-                <p className="text-lg text-zinc-400 leading-relaxed">传统 3D 渲染单图成本高，周期长达数天。</p>
+              <div className="p-8 bg-zinc-900/30 border border-white/5 rounded-2xl">
+                <Zap className="w-8 h-8 text-amber-400 mb-6" />
+                <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wider">高昂成本</h3>
+                <p className="text-base text-zinc-400 leading-relaxed">传统 3D 渲染单图成本高，周期长达数天。</p>
               </div>
-              <div className="p-10 bg-zinc-900/30 border border-white/5 rounded-2xl">
-                <Layers className="w-10 h-10 text-rose-400 mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-4 uppercase tracking-wider">虚假资产</h3>
-                <p className="text-lg text-zinc-400 leading-relaxed">常规 AI 生成的家具无对应 SKU，无法落地。</p>
+              <div className="p-8 bg-zinc-900/30 border border-white/5 rounded-2xl">
+                <Layers className="w-8 h-8 text-rose-400 mb-6" />
+                <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wider">虚假资产</h3>
+                <p className="text-base text-zinc-400 leading-relaxed">常规 AI 生成的家具无对应 SKU，无法落地。</p>
               </div>
             </div>
           </section>
@@ -149,13 +149,13 @@ export default function OttersHomeProject() {
           {/* Solution 1: C-End */}
           <section>
             <SectionLabel>02_C端解决方案</SectionLabel>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tight">1分钟实现“所见即所得”</h2>
-            <p className="text-zinc-400 text-xl leading-relaxed mb-16 text-justify">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">1分钟实现“所见即所得”</h2>
+            <p className="text-zinc-400 text-lg leading-9 mb-12 text-justify">
               打破传统枯燥的选品流程。用户输入需求后，系统快速生成高保真效果图，并精准识别图内风格，自动从数据库中匹配可购买的真实家具链接。
             </p>
             
             <div className="relative rounded-3xl overflow-hidden bg-transparent border border-white/5 bg-zinc-900/20">
-              <div className="aspect-[9/16] md:aspect-video bg-transparent relative flex items-center justify-center p-10">
+              <div className="aspect-[9/16] md:aspect-video bg-transparent relative flex items-center justify-center p-8">
                  <video 
                    src="/assets/tatadajia_phone.webm" 
                    autoPlay 
@@ -165,9 +165,9 @@ export default function OttersHomeProject() {
                    className="w-full h-full object-contain rounded-2xl shadow-2xl"
                  />
               </div>
-              <div className="py-8 bg-zinc-900/50 border-t border-white/5 flex items-center gap-3 justify-center backdrop-blur-sm">
-                 <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse" />
-                 <span className="text-sm font-mono text-emerald-500/80 uppercase tracking-widest">Live Demo • 移动端 C 端界面</span>
+              <div className="py-6 bg-zinc-900/50 border-t border-white/5 flex items-center gap-2 justify-center backdrop-blur-sm">
+                 <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                 <span className="text-xs font-mono text-emerald-500/80 uppercase tracking-widest">Live Demo • 移动端 C 端界面</span>
               </div>
             </div>
           </section>
@@ -175,8 +175,8 @@ export default function OttersHomeProject() {
           {/* Solution 2: B-End */}
           <section>
             <SectionLabel>03_B端解决方案</SectionLabel>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tight">SaaS 资产管理系统</h2>
-            <p className="text-zinc-400 text-xl leading-relaxed mb-16 text-justify">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">SaaS 资产管理系统</h2>
+            <p className="text-zinc-400 text-lg leading-9 mb-12 text-justify">
               为了支撑前台的精准匹配，我们为 B 端客户（家居厂商）开发了深度的后台管理系统，重构了电商 SKU+SPU 数据结构。
             </p>
             
@@ -189,37 +189,37 @@ export default function OttersHomeProject() {
                   className="object-contain object-top transition-transform duration-700 group-hover:scale-[1.02]"
                 />
               </div>
-              <div className="py-8 bg-zinc-900/50 border-t border-white/5 text-center backdrop-blur-sm">
-                 <p className="text-sm font-mono text-zinc-500 uppercase tracking-widest">商户后台仪表盘</p>
+              <div className="py-6 bg-zinc-900/50 border-t border-white/5 text-center backdrop-blur-sm">
+                 <p className="text-xs font-mono text-zinc-500 uppercase tracking-widest">商户后台仪表盘</p>
               </div>
             </div>
           </section>
 
           {/* Impact */}
-          <section className="pb-40">
+          <section className="pb-32">
             <SectionLabel>04_商业价值</SectionLabel>
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-10 tracking-tight">商业与工程突破</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">商业与工程突破</h2>
             
-            <div className="grid grid-cols-1 gap-10">
-              <div className="flex gap-8 items-start p-10 bg-emerald-900/5 border border-emerald-500/10 rounded-2xl hover:border-emerald-500/20 transition-colors">
-                <div className="p-5 bg-emerald-500/10 rounded-2xl shrink-0 mt-1">
-                  <Database className="w-10 h-10 text-emerald-400" />
+            <div className="grid grid-cols-1 gap-8">
+              <div className="flex gap-6 items-start p-8 bg-emerald-900/5 border border-emerald-500/10 rounded-2xl hover:border-emerald-500/20 transition-colors">
+                <div className="p-4 bg-emerald-500/10 rounded-2xl shrink-0 mt-1">
+                  <Database className="w-8 h-8 text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">工程成本降低</h3>
-                  <p className="text-xl text-zinc-400 leading-relaxed text-justify">
+                  <h3 className="text-2xl font-bold text-white mb-3">工程成本降低</h3>
+                  <p className="text-lg text-zinc-400 leading-relaxed text-justify">
                     深入业务底层，自建生图工作流，建立“风格模板库+家具品类模型”库。通过本地化部署与海内外 API 成本核算，<span className="text-emerald-400 font-bold">成功将单功能生成成本大幅降低 70%</span>。
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-8 items-start p-10 bg-zinc-900/20 border border-white/5 rounded-2xl hover:border-white/10 transition-colors">
-                <div className="p-5 bg-zinc-800 rounded-2xl shrink-0 mt-1">
-                  <BarChart3 className="w-10 h-10 text-indigo-400" />
+              <div className="flex gap-6 items-start p-8 bg-zinc-900/20 border border-white/5 rounded-2xl hover:border-white/10 transition-colors">
+                <div className="p-4 bg-zinc-800 rounded-2xl shrink-0 mt-1">
+                  <BarChart3 className="w-8 h-8 text-indigo-400" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">商业闭环验证</h3>
-                  <p className="text-xl text-zinc-400 leading-relaxed text-justify">
+                  <h3 className="text-2xl font-bold text-white mb-3">商业闭环验证</h3>
+                  <p className="text-lg text-zinc-400 leading-relaxed text-justify">
                     完成向 B2B2C 模式的战略升级，以极低算力成本打造 SaaS 营销利器，成功验证 AIGC 在装企谈单场景下的商业化变现潜力。
                   </p>
                 </div>
