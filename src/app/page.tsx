@@ -328,18 +328,18 @@ function StatusBar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => voi
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed top-0 left-0 right-0 h-14 flex items-center justify-between px-6 z-50 border-b border-white/5 bg-black/50 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 h-24 flex items-center justify-between px-8 z-50 border-b border-white/5 bg-black/50 backdrop-blur-sm"
     >
       <div className="flex items-center gap-4">
-        <div className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
-        <span className="micro-text font-bold tracking-widest">{t.hero.version}</span>
+        <div className="w-3 h-3 bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
+        <span className="text-sm font-bold tracking-widest">{t.hero.version}</span>
       </div>
       
       {/* Language Switcher */}
-      <div className="flex items-center bg-zinc-900/80 border border-white/10 rounded-full p-1">
+      <div className="flex items-center bg-zinc-900/80 border border-white/10 rounded-full p-1.5">
         <button
           onClick={() => setLang("EN")}
-          className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-widest transition-all ${
+          className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-widest transition-all ${
             lang === "EN" ? "bg-emerald-500/20 text-emerald-400" : "text-zinc-500 hover:text-zinc-300"
           }`}
         >
@@ -347,7 +347,7 @@ function StatusBar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => voi
         </button>
         <button
           onClick={() => setLang("CN")}
-          className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-widest transition-all ${
+          className={`px-6 py-2.5 rounded-full text-sm font-bold tracking-widest transition-all ${
             lang === "CN" ? "bg-emerald-500/20 text-emerald-400" : "text-zinc-500 hover:text-zinc-300"
           }`}
         >
@@ -355,7 +355,7 @@ function StatusBar({ lang, setLang, t }: { lang: Lang; setLang: (l: Lang) => voi
         </button>
       </div>
 
-      <div className="text-xs font-mono text-zinc-500 hidden md:block">{new Date().getFullYear()}</div>
+      <div className="text-sm font-mono text-zinc-500 hidden md:block">{new Date().getFullYear()}</div>
     </motion.div>
   );
 }
@@ -413,24 +413,24 @@ function Dock({ t }: { t: any }) {
         transition={{ type: "spring", damping: 20, stiffness: 300, delay: 0.5 }}
         className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-fit px-4"
       >
-        <div className="flex items-center gap-4 px-4 py-3 bg-zinc-900/90 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl shadow-black/80 ring-1 ring-white/10">
+        <div className="flex items-center gap-6 px-8 py-5 bg-zinc-900/90 backdrop-blur-xl border border-white/20 rounded-[2rem] shadow-2xl shadow-black/80 ring-1 ring-white/10">
           {controls.map((item, i) => (
             <button
               key={i}
               onClick={item.action}
-              className="relative group p-3 rounded-2xl hover:bg-white/10 transition-all active:scale-95 flex flex-col items-center gap-1 min-w-[60px] md:min-w-[auto]"
+              className="relative group p-4 rounded-2xl hover:bg-white/10 transition-all active:scale-95 flex flex-col items-center gap-1 min-w-[72px] md:min-w-[auto]"
             >
               <item.icon
-                className="w-6 h-6 text-zinc-200 group-hover:text-white transition-colors"
+                className="w-8 h-8 text-zinc-200 group-hover:text-white transition-colors"
                 strokeWidth={1.5}
               />
               {/* Mobile Label (Always visible) */}
-              <span className="text-[10px] font-medium text-zinc-400 md:hidden uppercase tracking-tight">
+              <span className="text-xs font-medium text-zinc-400 md:hidden uppercase tracking-tight mt-1">
                 {item.label}
               </span>
               
               {/* Desktop Tooltip (Hover only) */}
-              <span className="hidden md:block absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-zinc-900 border border-white/10 text-xs font-bold tracking-wider text-zinc-300 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase shadow-xl">
+              <span className="hidden md:block absolute -top-14 left-1/2 -translate-x-1/2 px-4 py-2 bg-zinc-900 border border-white/10 text-sm font-bold tracking-wider text-zinc-300 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase shadow-xl">
                 {item.label}
               </span>
               
