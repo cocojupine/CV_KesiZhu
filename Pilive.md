@@ -1,4 +1,4 @@
-# PiLive (Live Spark Creator)
+# PiLive AI Live Plugin (让每一场直播，都成为即时成交的孵化器)
 
 > **PROJECT TYPE:** PiLive AI Live Plugin
 > **YEAR:** 2025 - 2026
@@ -9,7 +9,7 @@
 
 ## Metadata (Sidebar)
 * **Role:** 产品经理，AI Engineering
-* **Tech Stack:** ASR (Whisper), VLM, Next.js, WebSocket, Dify
+* **Tech Stack:** ASR , VLM, AIGC
 * **Key Metrics:**
     * <湾区最具潜力奖>
     * <字节跳动生态支持>
